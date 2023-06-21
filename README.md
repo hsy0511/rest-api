@@ -93,7 +93,7 @@ https://www.postman.com/downloads/
 
 - postman 사용
 
-postman에서는 서버를 여러 메소드를 코드로 작성하지 않아도 사용할 수 있게 해주는 프로그램 입니다.
+postman 사용하는 이유는 웹에 관련된 메서드를 코드로 작성하지 않고 여러 메소드를 사용할 수 있게 해주는 프로그램이기 때문이다.
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/363e7fc0-f7d1-4256-ad9d-16112b313fb6)
 
