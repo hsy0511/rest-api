@@ -69,7 +69,7 @@ const server = express();
 server.listen(3000, () => {
     console.log("the server is running");
 });
-`
+```
 
 8. 서버가 작동하는지 확인하기
 
