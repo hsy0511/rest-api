@@ -83,6 +83,8 @@ https://add0n.com/json-beautifier.html?version=0.3.7&type=install
 
 설치 후 다시 localhost:3000/api/users 접속시 더 편하게 볼 수 있다.
 
+간단하게 코드를 변경할 수도 있다.
+
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/a1bfe6f5-6eb2-431a-b5bd-a6ee25489c3b)
 
 - postman 설치
