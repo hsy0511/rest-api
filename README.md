@@ -17,7 +17,7 @@ rest api : REpresentational State Transfer Application Programming Interface
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/0684bb53-88eb-41b4-b5d0-fe53c6911e15)
 
-qpi/users를 사용해서 우리가 만든 api를 사용하는 것이다.
+api/users를 사용해서 우리가 만든 api를 사용하는 것이다.
 
 get 메소드는 users안에서 사용되고 있는 데이터를 보여준다.
 
