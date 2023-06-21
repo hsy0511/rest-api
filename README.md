@@ -7,6 +7,8 @@ url : https://www.youtube.com/playlist?list=PLHGvDasahwZNIJ0aZQIhrf1Tg7Djqk7VQ
 
 rest api : REpresentational State Transfer Application Programming Interface
 
+rest api :  HTTP 요청을 통해 통신함으로써 리소스 내에서 읽기, 업데이트 및 삭제 등 기능을 수행하는 것이다.
+
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/f3189f85-dadb-4da2-8474-aa71534fe250)
 
 클라이언트가 요구하는 값을 반환하는 것이 서버이다.
