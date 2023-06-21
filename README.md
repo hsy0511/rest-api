@@ -153,6 +153,8 @@ body로 들어가서 6개 목록 중 raw를 누르고 text에 json 파일을 선
 
 위 데이터를 보냈지만 현재 서버에서 요청한 데이터 값을 받지 않았기 때문에 아직은 값이 같다.
 
+![image](https://github.com/hsy0511/rest-api/assets/104752580/5de5567d-4a01-4d07-a0c6-56cce7743389)
+
 데이터를 받기위해서 express 모듈에 있는 bodyParser라는 메소드를 사용해야한다.
 
 require를 통해서 bodyParser 메소드를 사용할 수 있게 활성화 시킨다.
