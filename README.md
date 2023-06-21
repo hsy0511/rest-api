@@ -59,7 +59,15 @@ express : 서버를 매우 쉽게 짤 수 있게 도와주는 라이브러리이
 
 7. sever.js 파일 생성하고 서버 생성하기
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/5c56e7b2-3608-485d-99ae-1bd212b80ee9)
+```javascript
+const express = require('express');
+
+const server = express();
+
+server.listen(3000, () => {
+    console.log("the server is running");
+});
+`
 
 8. 서버가 작동하는지 확인하기
 
@@ -69,11 +77,30 @@ express : 서버를 매우 쉽게 짤 수 있게 도와주는 라이브러리이
 
 const : 상수를 선언하는 키워드
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/d813d801-83a0-4629-b4b1-49269ae622b5)
+```javascript
+
+const users = [
+    {
+        id:"tjddud",
+        name:"syher",
+        email:"0511tjd@gmail.com"
+    },
+    {
+        id:"tjd",
+        name:"hersy",
+        email:"0511tjddud@naver.com"
+    }
+];
+```
 
 10. get 메소드로 users 불러오기
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/f3c454f3-ba65-4851-a716-27dededf85d1)
+```javascript
+server.get("/api/users",(req,res) => {
+    res.json(users);
+});
+
+```
 
 ## 제 2강, POST, Postman, JSON Viewer 사용
 
@@ -99,7 +126,12 @@ postman 사용하는 이유는 웹에 관련된 메서드를 코드로 작성하
 
 - post 메소드 사용
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/9a825b4c-472e-43b6-a796-9504d1e04f53)
+```javascript
+server.post("/api/users",(req,res) => { 
+    res.json(users);
+});
+
+```
 
 다시 postman으로 돌아가서 post 메소드로 변경하여 불러온다.
 
@@ -125,15 +157,27 @@ body로 들어가서 6개 목록 중 raw를 누르고 text에 json 파일을 선
 
 require를 통해서 bodyParser 메소드를 사용할 수 있게 활성화 시킨다.
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/60a1ac87-0225-41a1-96c1-12bd79979acb)
+```javascript
+
+const bodyParser = require('body-parser');
+```
 
 bodyparser를 사용하다는 코드를 작성한다.
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/292284f1-5a83-4101-a8f9-000aa151ad39)
+```javascript
+server.use(bodyParser.json());
+
+```
 
 마지막으로 서버에서 데이터를 받기위해서 push 메소드를 사용한다.
 
-![image](https://github.com/hsy0511/rest-api/assets/104752580/5d436cd8-f404-4ffe-825f-803ca16d3503)
+```javascript
+
+server.post("/api/users",(req,res) => { 
+    users.push(req.body)
+    res.json(users);
+});
+```
 
 postman에서 다시 응답을 받으면 불러오는 것을 볼 수 있다.
 
