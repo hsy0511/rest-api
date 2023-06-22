@@ -330,13 +330,13 @@ server.put('/api/user/:id',(req,res)=>{
 });
 ```
 
-포스트맨에 들어가서 put 메소드로 바꾼 후 헤더를 눌러 어떤 형식으로 변경할지 key와 value 값을 쓴다. 그리고 바디를 눌러 바꿀 유저 값을 쓴다.
+포스트맨에 들어가서 put 메소드로 바꾼 후 변경할 유저 id의 헤더를 눌러 어떤 형식으로 변경할지 key와 value 값을 쓴다. 그리고 바디를 눌러 바꿀 유저 값을 쓴다.
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/d167dc11-e2a1-4b01-a987-d08c7a689f6b)
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/6564b5bb-de0e-4bf2-9138-3ce34aa855b3)
 
-변경할 유저 id로 불러와 값이 변경된 것을 확인할 수 있다.
+유저 값이 변경된 것을 확인할 수 있다.
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/c79f03ad-3453-4f07-8066-4c4f67f9894c)
 
