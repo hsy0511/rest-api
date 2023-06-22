@@ -1,4 +1,4 @@
-![image](https://github.com/hsy0511/rest-api/assets/104752580/9577e674-0a2a-4f65-9a45-1b68ff962060)# rest-api
+# rest-api
 강의 : Danny TWLC(Rest API 강좌)
 
 url : https://www.youtube.com/playlist?list=PLHGvDasahwZNIJ0aZQIhrf1Tg7Djqk7VQ										
