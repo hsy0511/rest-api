@@ -1,4 +1,4 @@
-# rest-api
+![image](https://github.com/hsy0511/rest-api/assets/104752580/9577e674-0a2a-4f65-9a45-1b68ff962060)# rest-api
 강의 : Danny TWLC(Rest API 강좌)
 
 url : https://www.youtube.com/playlist?list=PLHGvDasahwZNIJ0aZQIhrf1Tg7Djqk7VQ										
@@ -250,6 +250,64 @@ id가 일치하지 않으면 오류서버로 이동한다
 
 
 ## 제 4강, Update 와 Delete 사용하는방법
+
+let 키워드 : let은 지역변수로 var와 달리 자신이 사용된 표현식 안에서만 사용이 가능한 키워드이다.(표현식 밖에서 선언한 let은 사용 가능)
+
+```javascript
+let times = 4;
+
+if (times > 3) {
+     let hello = "say Hello instead";
+     console.log(hello);
+ }
+```
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/9bcc2681-b3a3-4bc5-a09f-50cd3e24c492)
+
+표현식 안에서 사용했기 때문에 값이 제대로 나옴
+
+```javascript
+let times = 4;
+
+if (times > 3) {
+     let hello = "say Hello instead";
+ }
+
+console.log(hello);
+```
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/33105c03-8316-40b1-b39a-4e631f0bdf04)
+
+표현식 밖에서 사용했기 때문에 오류가 남
+
+- var를 사용한다면?
+
+```javascript
+var times = 4;
+
+if (times > 3) {
+     var hello = "say Hello instead";
+     console.log(hello);
+ }
+```
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/b5878337-c863-47f3-966a-d821ef534e8b)
+
+표현식 안에서 정상적으로 실행된다..
+
+```javascript
+var times = 4;
+
+if (times > 3) {
+     var hello = "say Hello instead";
+ }
+ 
+console.log(hello);
+```
+
+표현식 밖에서도 정상적으로 실행된다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/c9fb40af-2159-4c49-97af-a73f56344b1d)
 
 - update : put 메소드를 사용하여 유저값 변경하기
 
