@@ -250,3 +250,75 @@ id가 일치하지 않으면 오류서버로 이동한다
 
 
 ## 제 4강, Update 와 Delete 사용하는방법
+
+- update : put 메소드를 사용하여 유저값 변경하기
+
+```javascript
+server.put('/api/user/:id',(req,res)=>{
+    let foundIndex = users.findIndex(u=>u.id === req.params.id);
+    id를 통해서 유저의 인덱스를 찾는다.
+    유저 id와 파라미터 id가 동일할 경우 유저 값을 리턴한다.
+    
+    if(foundIndex === -1){
+        res.status(404).json({ errorMessage: 'User was not found'});
+        foundIndex가 -1과 같아 유저를 발견하지 못했을 경우 오류 서버로 이동한다.
+    }else{
+        users[foundIndex] = { ...users[foundIndex], ...req.body};
+        ...users[foundIndex] 값에 현재 있는 유저 값을 가져오고 바디를 통해서 유저 값을 업데이트 한다.
+            
+        res.json(users[foundIndex]);
+        업데이트된 유저를 불러온다.
+    }
+});
+```
+
+포스트맨에 들어가서 put 메소드로 바꾼 후 헤더를 눌러 어떤 형식으로 변경할지 key와 value 값을 쓴다. 그리고 바디를 눌러 바꿀 유저 값을 쓴다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/d167dc11-e2a1-4b01-a987-d08c7a689f6b)
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/6564b5bb-de0e-4bf2-9138-3ce34aa855b3)
+
+유저 값이 변경된 것을 확인할 수 있다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/c79f03ad-3453-4f07-8066-4c4f67f9894c)
+
+get 메소드로 바꿔서 불러와도 변경된 것을 확인할 수 있다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/7215b2c5-8df2-40f8-bf64-ae01f4794672)
+
+id가 일치하지 않으면 오류서버로 이동한다
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/816518ab-3555-41d8-ae73-f0638f901642)
+
+- delete : delete 메소드를 사용하여 유저값 삭제하기
+
+```javascript
+server.delete("/api/user/:id", (req,res) => {
+    let foundIndex = users.findIndex(u => u.id === req.params.id);
+    id를 통해서 유저의 인덱스를 찾는다.
+    유저 id와 파라미터 id가 동일할 경우 유저 값을 리턴한다.
+        
+    if(foundIndex === -1) {
+        res.status(404).json({ errorMessage: "Users was not found"});
+        foundIndex가 -1과 같아 유저를 발견하지 못했을 경우 오류 서버로 이동한다.
+    }else{
+        let foundUser = users.splice(foundIndex, 1);
+        splice 함수를 통해 foundIndex부터 1칸을 지운값을 foundUser에 저장한다.
+            
+        res.json(foundUser[0]);
+        유저값이 삭제된다.
+    }
+});
+```
+
+포스트맨에 들어가서 메소드를 delete로 바꾼 후 삭제할 user id 값을 입력하면 삭제될 데이터를 보여고 삭제한다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/60d4c78e-393f-49e5-a273-b81fa5d28b4d)
+
+get 메소드로 바꿔서 불러오면 삭제된 것을 확인할 수 있다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/f180394e-6a3b-4e11-81a4-615197865098)
+
+id가 일치하지 않으면 오류서버로 이동한다
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/2bb94950-e5d9-4661-b248-ddc2eea56de6)
