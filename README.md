@@ -336,7 +336,7 @@ server.put('/api/user/:id',(req,res)=>{
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/6564b5bb-de0e-4bf2-9138-3ce34aa855b3)
 
-유저 값이 변경된 것을 확인할 수 있다.
+변경할 유저 id로 불러와 값이 변경된 것을 확인할 수 있다.
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/c79f03ad-3453-4f07-8066-4c4f67f9894c)
 
