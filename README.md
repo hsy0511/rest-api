@@ -189,4 +189,64 @@ postman에서 다시 응답을 받으면 불러오는 것을 볼 수 있다.
 
 ## 제 3강, ID 를 통해 User의 데이터를 불러오는 방법
 
+- 서버 실행
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/bbc6e651-0414-4eb7-946b-8d4d45141e2a)
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/479e4b49-3aef-4d22-96ac-6c76aa92ef6e)
+
+- 특정한 값만 불러오는 방법
+
+1. id 파라미터 설정
+
+```javascript
+server.get("/api/user/:id",(req,res) => {
+    
+    });
+```
+
+2. 콘솔 창에서 id 확인하기
+
+```javascript
+server.get("/api/user/:id",(req,res) => {      
+console.log(req.params.id)
+});
+```
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/409e87b0-b6b0-4d1c-8842-5ca9b44b6afb)
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/d67a0acc-916a-41e4-8479-98d53e810d6c)
+
+url 뒤에 id를 확인할 수 있다.
+
+3. id로 특정 값 불러오기
+
+```javascript
+server.get("/api/user/:id",(req,res) => {
+    const user = users.find(u=>{
+    배열에 있는 유저를 찾는다.
+        
+        return u.id === req.params.id;
+        유저 id와 파라미터 id가 동일할 경우 유저 값을 리턴한다.
+    });
+    if(user){
+        res.json(user);
+        유저가 존재하면 유저값을 리턴한다.
+            
+    }else{
+        res.status(404).json({ errorMessage: "User was not found"});
+        유저가 존재하지 않으면 User was not found 나오는 오류서버로 이동된다.
+    }
+});
+```
+
+url 뒤에 id를 통해 특정 id에 대한 user가 나온다.
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/42a7d979-9fb0-49f1-8502-8abb439518fd)
+
+id가 일치하지 않으면 오류서버로 이동한다
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/f15c1e40-3482-4952-a5ab-bf5afbaea74b)
+
+
 ## 제 4강, Update 와 Delete 사용하는방법
