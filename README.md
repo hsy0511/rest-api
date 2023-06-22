@@ -186,3 +186,7 @@ server.post("/api/users",(req,res) => {
 postman에서 다시 응답을 받으면 불러오는 것을 볼 수 있다.
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/f2a3f9c7-1770-4b34-bead-482e234d7a9c)
+
+## 제 3강, ID 를 통해 User의 데이터를 불러오는 방법
+
+## 제 4강, Update 와 Delete 사용하는방법
