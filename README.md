@@ -381,7 +381,12 @@ id가 일치하지 않으면 오류서버로 이동한다
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/2bb94950-e5d9-4661-b248-ddc2eea56de6)
 
-## 제 5강, Oracle을 Nodejs와 연결하는 방법
+## 제 5강, 동적서비스와 정적서비스
+
+- 정적 서비스 : html, css, js => 웹 페이지
+
+
+## 제 6강, Oracle을 Nodejs와 연결하는 방법
 
 1. 새폴더 생성하고 vs코드에서 폴더 열기
 
@@ -389,7 +394,7 @@ id가 일치하지 않으면 오류서버로 이동한다
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/218efc0b-851b-4f64-9d99-e7981185b3a1)
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/6fb4d528-4169-4977-8a22-a09570749b65)
 
-2. 터미널 창에서 npm init -y 입력
+2. 터미널 창에서 npm init --y 입력
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/fcf1de74-49c1-488d-9afc-c5013d36a495)
 
