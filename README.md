@@ -381,6 +381,70 @@ id가 일치하지 않으면 오류서버로 이동한다
 
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/2bb94950-e5d9-4661-b248-ddc2eea56de6)
 
-## 제 5강, MongoDB 데이터 베이스 무료로 만들기
-## 제 6강, NodeJS로 MongoDB 연결하기
-## 제 7강, 몽고 데이터베이스 모델만들기
+## 제 5강, Oracle을 Nodejs와 연결하는 방법
+
+1. 새폴더 생성하고 vs코드에서 폴더 열기
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/089c10ff-0384-4ad4-b370-a2049eda191f)
+![image](https://github.com/hsy0511/rest-api/assets/104752580/218efc0b-851b-4f64-9d99-e7981185b3a1)
+![image](https://github.com/hsy0511/rest-api/assets/104752580/6fb4d528-4169-4977-8a22-a09570749b65)
+
+2. 터미널 창에서 npm init -y 입력
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/fcf1de74-49c1-488d-9afc-c5013d36a495)
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/b43c79cd-6923-4e6d-bb8c-e2a7f516b413)
+
+json 경로 확인 파일이 만들진 것을 확인할 수  있다.
+
+3. npm install oracledb 입력하여 oracedb 패키지 설치
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/e3b04b37-9d39-464e-bae4-496e87eb4016)
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/aa927293-6931-420b-a18c-b284b36ecc4c)
+
+oracledb 패키지가 추가된 것을 볼 수 있다.
+
+4. index.js 파일 생성
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/eb00e752-f5c9-4efb-b2b5-f4f23df6993f)
+
+5. 오라클 연결 코드 작성
+```javascript
+const oracledb = require('oracledb');
+// node에서 oracle를 사용하기 위해서 패키지를 불러옴
+
+oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
+// 이 패키지에서 오라클를 연동한다.
+
+async function fun() {
+qle
+    let con;
+// 다음에 나오는 con과 연결하는 con 즉, 변수지정
+
+    try{
+        con = await oracledb.getConnection({
+// fun 함수를 async를 사용하여 비동기 함수로 지정 
+// 비동기란? 특정 코드가 끝날때 까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 것
+
+            user : "hr",
+            password : "hr",
+            connectString : "localhsot/orcl"
+        });
+
+        const data = await con.execute(
+            `select * from departments`,
+        );
+        console.log(data.row);
+    } catch (err) {
+        console.error(err);
+    }
+}
+// try catch문으로 사용하여 유효성 검사(오류검출)
+fun();
+```
+6. index.js 실행
+
+![image](https://github.com/hsy0511/rest-api/assets/104752580/b4e8ca83-faa5-40c0-8941-691b541c1d2e)
+
+hr 계정에 departments 테이블에 있는 데이터가 출력된다.
