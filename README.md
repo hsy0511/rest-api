@@ -449,4 +449,4 @@ fun();
 
 hr 계정에 departments 테이블에 있는 데이터가 출력된다.
 
-https://ko.javascript.info/async-await
+async, await 참고 : https://ko.javascript.info/async-await
