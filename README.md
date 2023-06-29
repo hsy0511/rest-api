@@ -448,3 +448,5 @@ fun();
 ![image](https://github.com/hsy0511/rest-api/assets/104752580/b4e8ca83-faa5-40c0-8941-691b541c1d2e)
 
 hr 계정에 departments 테이블에 있는 데이터가 출력된다.
+
+https://ko.javascript.info/async-await
