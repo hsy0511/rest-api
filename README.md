@@ -418,7 +418,7 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 // 이 패키지에서 오라클를 연동한다.
 
 async function fun() {
-qle
+
     let con;
 // 다음에 나오는 con과 연결하는 con 즉, 변수지정
 
